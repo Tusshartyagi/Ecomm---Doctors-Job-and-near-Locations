@@ -1,0 +1,284 @@
+/*place custom css here*/
+ /* our custome popup css */
+
+/* Common Styles */
+span.custome-job-category {
+    margin-right: 16px;
+}
+.admin-popup, div#mail_popup, .popup, .mail_popup, .job_mail_popup, .job_popup {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    z-index: 999999!important;
+    overflow: auto;
+}
+.admin-popup {
+    width: 450px;
+}
+.popup-content h2 {
+    text-transform: capitalize;
+}
+div#popup-content p {
+    margin: 0;
+}
+.seller-avatar {
+    display: flex;
+    gap: 6px;
+    flex-direction: column;
+}
+.custome-author-name {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+img.avatar.avatar-96.photo {
+    border-radius: 10px;
+}
+div#popup-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 12px;
+}
+div.admin-popup {
+    position: absolute;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: none;
+}
+form#contactForm {
+    display: flex;
+    flex-direction: column;
+}
+div#mail_popup {
+    width: 700px;
+    height: 535px;
+    align-items: flex-start;
+    padding: 50px 15px 0px 15px;
+    border: 0;
+}
+#contactForm input {
+    height: 35px;
+}
+.wp-editor-wrap {
+    display: flex;
+    flex-direction: column;	
+}
+input#hk_send_mail,
+input#hk_job_send_mail {
+    width: 100%;
+    padding: 10px;
+    height: auto;
+    margin-top: 16px;
+}
+/* button#close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50%;
+    max-width: 100px;
+    margin-top: 8px;
+    display: inline-block;
+    height: auto;
+    padding: 10px;
+} */
+#dokan-seller-listing-wrap .store-footer .dokan-btn-theme.dokan-btn-round {
+    padding: 0px 1px !important;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #333;
+    border-radius: 8px;
+}
+.mail_popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #333;
+    border-radius: 8px;
+}
+.job_mail_popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #333;
+    border-radius: 8px;
+}
+.job_popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #333;
+    border-radius: 8px;
+}
+
+/* Pagination Styles */
+.page-template-jober-template .pagination {
+    display: inline-flex;
+    width: auto;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    align-items: center;
+    justify-content: space-between;
+}
+.pagination_top {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+.page-template-jober-template .pagination a.page-numbers {
+    text-decoration: none;
+    color: #000;
+    float: left;
+    padding: 8px 16px;
+}
+.pagination span.current {
+    background-color: #4CAF50;
+    color: #FFF;
+    padding: 4px 10px;
+}
+
+/* Star Rating Styles */
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: center;
+    position: relative;
+    margin-left: 14%;
+}
+.rating > input {
+    display: none;
+}
+.rating > label {
+    display: inline;
+    padding: 0px 10px;
+    margin: 0;
+    position: relative;
+    width: 1.1em;
+    cursor: pointer;
+    color: #000;
+}
+.rating > label:hover,
+.rating > label:hover ~ label,
+.rating > input.radio-btn:checked ~ label {
+    color: #FFD700;
+}
+.rating > label:before {
+    content: "\2605";
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 24px;
+}
+select#job-category-filter, #job-city-filter {
+    border: 1px solid #0000006b;
+}
+label#job-category-filter,
+label#job-city-filter {
+  display: block; 
+  margin-bottom: 5px; 
+  font-weight: bold; 
+}
+select#job-category-filter,
+select#job-city-filter {
+  width: 100%; 
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px; 
+  box-sizing: border-box; 
+}
+
+/* Add this CSS for popup positioning in mobile and tablet devices */
+
+@media screen and (min-width: 1024px) {
+    select#job-category-filter,
+    select#job-city-filter {
+      font-size: 1rem; 
+    }
+  }
+  
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  
+    select#job-category-filter,
+    select#job-city-filter {
+      font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .admin-popup, .mail_popup, .job_mail_popup, .job_popup .popup {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-width: 500px;
+    }
+    /* #mail_popup, .popup {
+        width: 90%;
+        max-width: 350px;
+    } */
+    select#job-category-filter,
+    select#job-city-filter {
+      font-size: 14px;
+      width: 100%!important;
+    }
+    span.custome-job-category, .custome-job-city-filter {
+      margin-bottom: 5px;
+    }
+    form#position-filter-form {
+        display: grid;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .admin-popup, .mail_popup, .job_mail_popup, .job_popup .popup {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-width: 600px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .admin-popup, .mail_popup, .job_mail_popup, .job_popup .popup {
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .admin-popup, .mail_popup, .job_mail_popup, .job_popup .popup {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-width: 90%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .admin-popup, .mail_popup, .job_mail_popup, .job_popup .popup{
+        width: 90%;
+        max-width: 280px;
+    }
+}
